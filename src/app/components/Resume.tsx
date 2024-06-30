@@ -1,14 +1,18 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import React, { useState, useEffect } from "react";
 import { AiOutlineDownload } from "react-icons/ai";
-import { Document, Page, pdfjs } from "react-pdf";
+import { pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   "pdfjs-dist/build/pdf.worker.min.mjs",
   import.meta.url
 ).toString();
+
+const Document = dynamic(() => import("react-pdf").then(mod => mod.Document), { ssr: false });
+const Page = dynamic(() => import("react-pdf").then(mod => mod.Page), { ssr: false });
 
 const Resume = () => {
   const [width, setWidth] = useState(1200);
