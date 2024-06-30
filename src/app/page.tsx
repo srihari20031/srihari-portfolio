@@ -1,8 +1,6 @@
 "use client";
 
 import "./styles/globals.css";
-import Header from "./components/Header";
-
 import Intro from "./components/Intro";
 import AboutMe from "./components/AboutMe";
 import Connect from "./components/Connect";

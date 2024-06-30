@@ -23,26 +23,7 @@ import Github from "../../../public/icons8-github-94.png"
 import Gmail from "../../../public/icons8-gmail-48.png"
 import StayHappy from "../../../public/StayHappy.png"
 
-export const sections = [
-  {
-    id: 0,
-    title: "Projects",
-    link: "/Projects",
-    icon: <FaArchive />,
-  },
-  {
-    id: 1,
-    title: "Resume",
-    link: "/Resume",
-    icon: <FaFileAlt />,
-  },
-  {
-    id: 2,
-    title: "About me",
-    link: "/#About",
-    icon: <FaUserAlt />,
-  },
-];
+
 
 export const skills = [
   {

@@ -1,21 +1,59 @@
 "use client";
-import React from "react";
-import { sections } from "../constants";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
 import localFont from "next/font/local";
-import { HiMenu } from "react-icons/hi";
+import { HiMenu, HiX } from "react-icons/hi";
 
 import { motion, AnimatePresence } from "framer-motion";
+import { AiFillProject, AiOutlineDownload } from "react-icons/ai";
 
 const Agustina = localFont({
   src: "../../../public/static/fonts/Agustina.woff",
 });
 
-const Header = () => {
-  // const pathname = useLocation();
+interface NavigationItemsProps {
+  pathName: string;
+  handleClick: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
+  isMobile: boolean;
+}
 
+const NavigationItems: React.FC<NavigationItemsProps> = ({ pathName, handleClick, isMobile }) => (
+  <div className={`relative flex flex-col items-center justify-center m-auto ${isMobile ? '' : 'lg:flex-row'} gap-4`}>
+    <div
+      className={`flex items-center justify-center px-4 ${isMobile ? '' : 'hover:bg-gray-800 hover:rounded-lg hover:p-2'} ${
+        "/Projects" === pathName ? "z-2 bg-gray-800 rounded-lg p-2" : "lg:text-white"
+      }`}
+    >
+      <span className={`block relative font-bold ${
+          "/Projects" === pathName ? "text-color-2" : ""
+        } ${isMobile ? 'text-2xl' : ''}`}>
+        <AiFillProject />
+      </span>
+      <Link
+        className={`block relative px-3 font-bold ${
+          "/Projects" === pathName ? "text-white" : ""
+        } ${isMobile ? 'text-2xl' : ''}`}
+        href="/Projects"
+        onClick={handleClick}
+      >
+        Showcases
+      </Link>
+    </div>
+    <a
+      href="/static/PDFs/Srihari-resume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`flex items-center rounded-lg ${isMobile ? '' : 'hover:bg-gray-800 hover:rounded-lg hover:p-2'} font-bold ${isMobile ? 'text-2xl' : ''}`}
+    >
+      <AiOutlineDownload className="mr-2" />
+      <span>Download CV</span>
+    </a>
+  </div>
+);
+
+const Header: React.FC = () => {
   const router = useRouter();
   const pathName = usePathname();
 
@@ -41,94 +79,44 @@ const Header = () => {
       },
     },
   };
-  const containerVars = {
-    initial: {
-      transition: {
-        staggerChildren: 0.09,
-        staggerDirection: -1,
-      },
-    },
-    open: {
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.09,
-        staggerDirection: 1,
-      },
-    },
-  };
-
-  const mobileLinkVars = {
-    initial: {
-      y: "30vh",
-      transition: {
-        duration: 0.5,
-        ease: [0.37, 0, 0.63, 1],
-      },
-    },
-    open: {
-      y: 0,
-      transition: {
-        ease: [0, 0.55, 0.45, 1],
-        duration: 0.7,
-      },
-    },
-  };
 
   const toggleNavigation = () => {
     setOpenNavigation((prevOpenNavigation) => !prevOpenNavigation);
   };
-  const handleClick = (event: any) => {
+
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     event.preventDefault();
-    router.push(event.target.getAttribute("href"));
-    
+    const href = event.currentTarget.getAttribute("href");
+    if (href) {
+      router.push(href);
+    }
+
     if (!openNavigation) return;
 
     setOpenNavigation(false);
   };
 
+  useEffect(() => {
+    // Close the navigation menu after navigation
+    setOpenNavigation(false);
+  }, [pathName]);
+
   return (
-    <div
-      className={`sticky  w-full z-50 py-4 mt-4 px-28  md:px-4 max-sm:px-4 sm:px-4 `}
-    >
+    <div className={`sticky w-full z-50 py-6 mt-2 px-28 md:px-4 max-sm:px-4 sm:px-4 mb-20`}>
       <div className="flex lg:items-center lg:px-10 px-4 justify-between md:items-center">
-        <div className="  lg:px-8  py-2" id="home">
+        <div className="lg:px-8 py-2" id="home">
           <Link
             href="/"
-            className={`cursor-pointer   font-extrabold text-[28px]  max-sm:text-[20px]  ${Agustina.className}`}
+            className={`cursor-pointer font-extrabold text-[28px] max-sm:text-[20px] ${Agustina.className}`}
           >
-            <h1 className="text-color-2">
-              Sri hari narayan 
-            </h1>
+            <h1 className="text-color-2">Sri hari narayan</h1>
           </Link>
         </div>
 
-        <nav className="hidden fixed top-[80px] left-0 right-0 bottom-0 bg-n-8 lg:static lg:mx-auto lg:bg-transparent items-center gap-10 text-[18px] lg:flex lg:mr-2">
-          <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
-            {sections.map((section) => (
-              <div
-                key={section.id}
-                className={`flex items-center justify-center text-n-1 transition-colors hover:text-white px-4 ${
-                  section.link === pathName
-                    ? "z-2 lg:text-color-2"
-                    : "lg:text-n-1/50"
-                }`}
-              >
-                <span>{section.icon}</span>
-                <Link
-                  className="block relative px-3 font-bold"
-                  href={section.link}
-                  onClick={handleClick}
-                >
-                  {section.title}
-                </Link>
-              </div>
-            ))}
-          </div>
+        <nav className="hidden fixed top-[80px] left-0 right-0 bottom-0 bg-n-8 lg:static lg:bg-transparent items-center text-[17px] lg:flex lg:mr-2">
+          <NavigationItems pathName={pathName} handleClick={handleClick} isMobile={false} />
         </nav>
-        <button
-          className=" md:mt-0 lg:hidden text-xl cursor-pointer"
-          onClick={toggleNavigation}
-        >
+        <button className="md:mt-0 lg:hidden text-xl cursor-pointer" onClick={toggleNavigation}>
           <HiMenu />
         </button>
       </div>
@@ -139,51 +127,27 @@ const Header = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="fixed left-0 top-0 w-full h-screen origin-top bg-[#0e081d]  p-10 text-color-2"
+            className="fixed left-0 top-0 w-full h-screen origin-top bg-[#0e081d] p-10 text-color-2"
           >
             <div className="flex h-full flex-col">
-              <div className="flex justify-between">
-                <div className=" font-bold lg:px-8 xl:px-10 py-2" id="home">
+              <div className="flex justify-between items-center">
+                <div className="font-bold lg:px-8 xl:px-10 py-2" id="home">
                   <Link
                     href="/"
-                    className={`cursor-pointer text-color-2 font-extrabold text-[28px]  max-sm:text-[20px]  ${Agustina.className}`}
+                    className={`cursor-pointer text-color-2 font-extrabold text-[28px] max-sm:text-[20px] ${Agustina.className}`}
                   >
                     <h1>
                       <span>&lt;</span>Shn <span>/&gt;</span>
                     </h1>
                   </Link>
                 </div>
-                <p
-                  className="cursor-pointer text-md "
-                  onClick={toggleNavigation}
-                >
-                  Close
+                <p className="cursor-pointer text-lg" onClick={toggleNavigation}>
+                 <HiX />
                 </p>
               </div>
-              <motion.div
-                variants={containerVars}
-                initial="initial"
-                animate="open"
-                exit="initial"
-                className="flex flex-col h-full justify-center font-lora items-center gap-10 "
-              >
-                {sections.map((section) => (
-                  <motion.div
-                    key={section.id}
-                    variants={mobileLinkVars}
-                    className="text-2xl uppercase flex items-center justify-center"
-                  >
-                    <span>{section.icon}</span>
-                    <Link
-                      className="block relative px-3 font-bold"
-                      href={section.link}
-                      onClick={handleClick}
-                    >
-                      {section.title}
-                    </Link>
-                  </motion.div>
-                ))}
-              </motion.div>
+              <div className="flex flex-col h-full justify-center font-lora items-center gap-10">
+                <NavigationItems pathName={pathName} handleClick={handleClick} isMobile={true} />
+              </div>
             </div>
           </motion.div>
         )}
