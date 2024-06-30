@@ -4,7 +4,7 @@ import { skills } from "../constants/index";
 const SkillBox = () => {
   return (
     <div className="my-20">
-      <div className="font-extrabold text-center text-[30px] text-[#ffb703]">
+      <div className="font-extrabold text-center text-[30px] ">
       Skills & Showcases
       </div>
       

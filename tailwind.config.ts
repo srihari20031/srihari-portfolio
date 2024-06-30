@@ -16,6 +16,11 @@ export default {
           6: "#FF98E2",
           7: "#80D0C7",
           8: "#1a202c",
+        darkPurple: '#10031c',
+        lightPurple: '#6a0dad',
+        vibrantPink: '#ff69b4',
+        teal: '#008080',
+        gold: '#ffd700',
         },
         stroke: {
           1: "#26242C",
@@ -61,14 +66,14 @@ export default {
         DEFAULT: "linear",
       },
       boxShadow: {
-        'custom-white': '0 0 10px rgba(0, 184, 168, 0.8), 0 0 20px rgba(0, 184, 168, 0.6), 0 0 30px rgba(0, 184, 168, 0.4)',
+        'custom-gold': '0 0 10px rgba(255, 200, 118, 0.8), 0 0 20px rgba(255, 200, 118, 0.6), 0 0 30px rgba(255, 200, 118, 0.4)',
         
       },
       borderWidth: {
         DEFAULT: "0.0625rem",
       },
       backgroundImage: {
-        "custom-gradient":  'linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b)',
+        'custom-gradient':  'linear-gradient(315deg, hsla(150, 98%, 66%, 1) 5%, hsla(195, 71%, 47%, 1) 71%)',
         'subheading-gradient': 'linear-gradient(135deg, #534E8A, #B0A8B9)',
         "project-bg": "url('/Bg-projects.png')",
         'glow': "url('/Gradient.png')"

@@ -238,7 +238,7 @@ export const socialMediaLinks = [
  
   {
     name: "Gmail",
-    link: "",
+    link: "mailto:sriharivelayutham.28@gmail.com",
     icon:  Gmail,
     backgroundColor: "#1877F2",
   },
@@ -250,7 +250,7 @@ export const socialMediaLinks = [
   },
   {
     name: "Twitter",
-    link: "https://www.instagram.com/sri__hari__narayan__v/",
+    link: "https://x.com/Srihari280",
     icon: X, 
     backgroundColor: "#E4405F", 
   },

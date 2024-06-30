@@ -3,11 +3,10 @@ import React from "react";
 import { sections } from "../constants";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { disablePageScroll, enablePageScroll } from "scroll-lock";
+
 import localFont from "next/font/local";
 import { HiMenu } from "react-icons/hi";
-import { IoCloseOutline } from "react-icons/io5";
-import Menu from "./Menu";
+
 import { motion, AnimatePresence } from "framer-motion";
 
 const Agustina = localFont({
@@ -89,16 +88,16 @@ const Header = () => {
 
   return (
     <div
-      className={`sticky top-0 left-0 w-full z-50 backdrop-blur-sm py-4 mt-4 px-28  md:px-4 max-sm:px-4 sm:px-4 `}
+      className={`sticky  w-full z-50 py-4 mt-4 px-28  md:px-4 max-sm:px-4 sm:px-4 `}
     >
       <div className="flex lg:items-center lg:px-10 px-4 justify-between md:items-center">
-        <div className=" font-bold lg:px-8 xl:px-10 py-2" id="home">
+        <div className="  lg:px-8  py-2" id="home">
           <Link
             href="/"
-            className={`cursor-pointer  text-[#ffb703] font-extrabold text-[28px]  max-sm:text-[20px]  ${Agustina.className}`}
+            className={`cursor-pointer   font-extrabold text-[28px]  max-sm:text-[20px]  ${Agustina.className}`}
           >
-            <h1>
-              <span>&lt;</span>Shn <span>/&gt;</span>
+            <h1 className="text-color-2">
+              Sri hari narayan 
             </h1>
           </Link>
         </div>
@@ -108,9 +107,9 @@ const Header = () => {
             {sections.map((section) => (
               <div
                 key={section.id}
-                className={`flex items-center justify-center text-n-1 transition-colors hover:text-[#8ecae6] px-4 ${
+                className={`flex items-center justify-center text-n-1 transition-colors hover:text-white px-4 ${
                   section.link === pathName
-                    ? "z-2 lg:text-[#ffb703]"
+                    ? "z-2 lg:text-color-2"
                     : "lg:text-n-1/50"
                 }`}
               >
@@ -127,7 +126,7 @@ const Header = () => {
           </div>
         </nav>
         <button
-          className="mt-2 md:mt-0 lg:hidden text-xl cursor-pointer"
+          className=" md:mt-0 lg:hidden text-xl cursor-pointer"
           onClick={toggleNavigation}
         >
           <HiMenu />
@@ -140,14 +139,14 @@ const Header = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="fixed left-0 top-0 w-full h-screen origin-top bg-[#009996] text-black p-10"
+            className="fixed left-0 top-0 w-full h-screen origin-top bg-[#0e081d]  p-10 text-color-2"
           >
             <div className="flex h-full flex-col">
               <div className="flex justify-between">
                 <div className=" font-bold lg:px-8 xl:px-10 py-2" id="home">
                   <Link
                     href="/"
-                    className={`cursor-pointer  text-[black] font-extrabold text-[28px]  max-sm:text-[20px]  ${Agustina.className}`}
+                    className={`cursor-pointer text-color-2 font-extrabold text-[28px]  max-sm:text-[20px]  ${Agustina.className}`}
                   >
                     <h1>
                       <span>&lt;</span>Shn <span>/&gt;</span>
@@ -155,7 +154,7 @@ const Header = () => {
                   </Link>
                 </div>
                 <p
-                  className="cursor-pointer text-md text-black"
+                  className="cursor-pointer text-md "
                   onClick={toggleNavigation}
                 >
                   Close
@@ -172,7 +171,7 @@ const Header = () => {
                   <motion.div
                     key={section.id}
                     variants={mobileLinkVars}
-                    className="text-3xl uppercase text-black flex items-center justify-center"
+                    className="text-2xl uppercase flex items-center justify-center"
                   >
                     <span>{section.icon}</span>
                     <Link

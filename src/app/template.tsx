@@ -6,18 +6,18 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 export default function Template({ children }: { children: React.ReactNode }) {
-  const [loading, setLoading] = React.useState(true);
+  // const [loading, setLoading] = React.useState(true);
 
-  React.useEffect(() => {
-    // Simulate a delay to showcase the loading page
-    setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-  }, []);
+  // React.useEffect(() => {
+  //   // Simulate a delay to showcase the loading page
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 1500);
+  // }, []);
 
-  if (loading) {
-    return <LoadingPage />;
-  }
+  // if (loading) {
+  //   return <LoadingPage />;
+  // }
   return (
     <motion.div
       initial={{ y: 20, opacity: 0 }}

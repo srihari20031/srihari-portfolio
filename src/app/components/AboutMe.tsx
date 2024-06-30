@@ -42,15 +42,16 @@ const AboutMe = () => {
   return (
     <motion.div className="mb-20 lg:mb-0 mt-24">
       <motion.div
-        className="font-extrabold text-center text-[35px] max-sm:text-[24px] my-20 text-[#ffb703] mt-20 px-10"
+        className="font-extrabold text-center text-[35px] max-sm:text-[24px] my-16 max-sm:my-8  mt-20 px-10 leading-10"
         initial={{ opacity: 0, y: 50 }}
            animate={{ opacity: 1, y: 0 }}
            transition={{ duration: 0.5 }}
       >
         Peek behind the curtain, Know who I am
+        <p className="text-[22px] max-sm:text-[16px] bg-gradient-to-r from-color-2 to-color-3 bg-clip-text text-transparent ">About Me</p>
       </motion.div>
       <motion.div
-        className="flex lg:px-20 max-sm:px-10 md:px-10 lg:mx-28 lg:pt-10 lg:gap-40 mb-10 flex-col lg:flex-row  text-center lg:text-start items-center justify-center"
+        className="flex lg:px-20 max-sm:px-10 md:px-10 lg:mx-28  lg:gap-40 mb-10 flex-col lg:flex-row  text-center lg:text-start items-center justify-center"
         ref={aboutMeref}
       >
         
@@ -69,7 +70,7 @@ const AboutMe = () => {
                 {" "}
                 <p className="mb-4">
                   Hello! I'm{" "}
-                  <span className="text-[#8ecae6] font-extrabold">
+                  <span className=" text-color-2 font-extrabold">
                     Sri hari narayan V
                   </span>
                   , weber with a strong background in creating dynamic,
@@ -80,7 +81,7 @@ const AboutMe = () => {
                 {" "}
                 <p>
                   I graduated with a{" "}
-                  <span className="text-[#8ecae6] font-extrabold">
+                  <span className=" text-color-2 font-extrabold">
                     Bachelor's degree in Computer Science from Velammal
                     institute of technology
                   </span>

@@ -13,7 +13,7 @@ interface StarBackgroundProps {
 const StarBackground: React.FC<StarBackgroundProps> = (props) => {
   const ref = useRef<any>();
   const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5000), { radius: 1.2 })
+    random.inSphere(new Float32Array(5000), { radius: 1.4 })
   );
 
   useFrame((state, delta) => {
@@ -28,7 +28,7 @@ const StarBackground: React.FC<StarBackgroundProps> = (props) => {
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
-          color="#fff"
+          color="gold"
           size={0.002}
           sizeAttenuation={true}
           depthWrite={false}
@@ -39,7 +39,7 @@ const StarBackground: React.FC<StarBackgroundProps> = (props) => {
 };
 
 const StarsCanvas: React.FC = () => (
-  <div className="w-full h-auto fixed inset-0 z-[-1]">
+  <div className="w-full h-auto fixed inset-0 z-[-1] ">
     <Canvas camera={{ position: [0, 0, 1] }}>
       <Suspense fallback={null}>
         <StarBackground />

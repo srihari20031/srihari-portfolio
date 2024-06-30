@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className="absolute top-0 z-[-2] h-screen w-full  bg-[#0e081d] overflow-y-scroll overflow-x-hidden"
+        className="absolute top-0 z-[1] h-screen w-full  bg-[#0e081d] overflow-y-scroll overflow-x-hidden"
         // style={{
         //   backgroundImage:
         //     "url('./2.png')",
