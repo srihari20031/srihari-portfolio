@@ -1,7 +1,5 @@
 
 import "./styles/globals.css";
-import "atropos/css";
-import React from "react";
 import StarsCanvas from "./components/main/StarsCanvas";
 import { Metadata } from "next";
 

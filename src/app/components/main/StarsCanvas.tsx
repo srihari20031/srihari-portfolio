@@ -12,11 +12,12 @@ interface StarBackgroundProps {
 
 const StarBackground: React.FC<StarBackgroundProps> = (props) => {
   const ref = useRef<any>();
-  const [sphere] = useState(() =>
-    random.inSphere(new Float32Array(5000), { radius: 1.4 })
-  );
+  const [sphere] = useState(() => {
+    const float32Array = random.inSphere(new Float32Array(5000), { radius: 1.4 }) as Float32Array;
+    return float32Array;
+  });
 
-  useFrame((state, delta) => {
+  useFrame((state: any, delta: any) => {
     if (ref.current) {
       ref.current.rotation.x -= delta / 10;
       ref.current.rotation.y -= delta / 15;

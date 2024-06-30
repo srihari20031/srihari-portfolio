@@ -1,8 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 import { fontFamily } from "tailwindcss/defaultTheme";
-import plugin from "tailwindcss/plugin";
 
-export default {
+const config = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -16,11 +15,11 @@ export default {
           6: "#FF98E2",
           7: "#80D0C7",
           8: "#1a202c",
-        darkPurple: '#10031c',
-        lightPurple: '#6a0dad',
-        vibrantPink: '#ff69b4',
-        teal: '#008080',
-        gold: '#ffd700',
+          darkPurple: '#10031c',
+          lightPurple: '#6a0dad',
+          vibrantPink: '#ff69b4',
+          teal: '#008080',
+          gold: '#ffd700',
         },
         stroke: {
           1: "#26242C",
@@ -67,17 +66,15 @@ export default {
       },
       boxShadow: {
         'custom-gold': '0 0 10px rgba(255, 200, 118, 0.8), 0 0 20px rgba(255, 200, 118, 0.6), 0 0 30px rgba(255, 200, 118, 0.4)',
-        
       },
       borderWidth: {
         DEFAULT: "0.0625rem",
       },
       backgroundImage: {
-        'custom-gradient':  'linear-gradient(315deg, hsla(150, 98%, 66%, 1) 5%, hsla(195, 71%, 47%, 1) 71%)',
+        'custom-gradient': 'linear-gradient(315deg, hsla(150, 98%, 66%, 1) 5%, hsla(195, 71%, 47%, 1) 71%)',
         'subheading-gradient': 'linear-gradient(135deg, #534E8A, #B0A8B9)',
         "project-bg": "url('/Bg-projects.png')",
         'glow': "url('/Gradient.png')"
-      
       },
       animation: {
         float: "float 3s ease-in-out infinite",
@@ -108,5 +105,6 @@ export default {
       },
     },
   },
-  
 };
+
+export default config;

@@ -16,12 +16,12 @@ import Ninchat from "../../../public/Ninchat.png";
 import Ecommerce from "../../../public/Ecommerce.png";
 import DalleClone from "../../../public/DallEClone.png";
 import MoiveApp from "../../../public/Movieapp.png";
-import HotelApp from "../../../public/PDemo.png";
 import Insta from "../../../public/icons8-instagram (1).svg"
 import Linkedin from "../../../public/icons8-linkedin (1).svg"
 import X from "../../../public/icons8-twitterx (1).svg"
 import Github from "../../../public/icons8-github-94.png"
 import Gmail from "../../../public/icons8-gmail-48.png"
+import StayHappy from "../../../public/StayHappy.png"
 
 export const sections = [
   {
@@ -179,7 +179,7 @@ export const projectsArray = [
   {
     id: 4,
     title: "StayHappy",
-    image: HotelApp,
+    image: StayHappy,
     description:
       "The Hotel Booking App is a robust and user-friendly web application developed using the MERN stack (MySQL, Express.js, React, Node.js). This platform provides a seamless interface for users to search, compare, and book hotels with ease.",
     stack: [

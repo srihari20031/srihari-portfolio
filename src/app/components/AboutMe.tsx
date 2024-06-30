@@ -1,8 +1,5 @@
-import Image from "next/image";
-import image2 from "../../../public/pexels-olya-prutskova-35454617-7163731.jpg";
 import { motion, useInView } from "framer-motion";
 import React, { useRef } from "react";
-import Atropos from "atropos/react";
 
 const variants = {
   initial: {
@@ -69,7 +66,7 @@ const AboutMe = () => {
               <li className="mb-4">
                 {" "}
                 <p className="mb-4">
-                  Hello! I'm{" "}
+                  Hello! I&apos;m{" "}
                   <span className=" text-color-2 font-extrabold">
                     Sri hari narayan V
                   </span>
@@ -82,11 +79,11 @@ const AboutMe = () => {
                 <p>
                   I graduated with a{" "}
                   <span className=" text-color-2 font-extrabold">
-                    Bachelor's degree in Computer Science from Velammal
+                    Bachelor&apos;s degree in Computer Science from Velammal
                     institute of technology
                   </span>
                   , where I developed a solid foundation in programming and
-                  software development. Since then, I've worked on numerous
+                  software development. Since then, I&apos;ve worked on numerous
                   projects that have challenged me to push the boundaries of my
                   skills and creativity.
                 </p>
