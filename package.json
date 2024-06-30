@@ -14,6 +14,7 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@react-pdf/renderer": "^3.4.4",
+    "three": "^0.166.0",
     "@react-three/drei": "^9.0.1",
     "@react-three/fiber": "^8.16.8",
     "@splinetool/react-spline": "^2.2.6",
@@ -32,7 +33,7 @@
     "react-text-transition": "^3.1.0",
     "scroll-lock": "^2.1.5",
     "tech-stack-icons": "^2.0.3",
-    "three": "^0.132.2",
+    
     "url-loader": "^4.1.1"
   },
   "devDependencies": {
