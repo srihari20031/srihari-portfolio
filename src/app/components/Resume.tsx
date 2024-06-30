@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { AiOutlineDownload } from "react-icons/ai";
 import { pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -13,9 +13,9 @@ const Document = dynamic(() => import("react-pdf").then(mod => mod.Document), { 
 const Page = dynamic(() => import("react-pdf").then(mod => mod.Page), { ssr: false });
 
 const Resume = () => {
-  const [width, setWidth] = useState(1200);
+  const [width, setWidth] = React.useState(1200);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
     
     if (typeof window !== "undefined") {
