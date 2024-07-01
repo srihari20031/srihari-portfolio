@@ -16,8 +16,8 @@ const Intro = () => {
           </h2>
         </div>
         <div>
-          <h1 className="lg:text-5xl text-3xl font-bold  z-50 leading-10 mb-8 bg-gradient-to-r from-color-2 to-color-3 bg-clip-text text-transparent text-center">
-            Full Stack Developer
+          <h1 className="lg:text-4xl text-3xl font-bold  z-50 leading-10 mb-8 bg-gradient-to-r from-color-2 to-color-3 bg-clip-text text-transparent text-center">
+            Software Developer
           </h1>
           <p className="leading-8 text-[20px] text-center">
             A passionate full stack developer who exploring new technologies
@@ -30,7 +30,7 @@ const Intro = () => {
                 See my work
               </button>
             </Link>
-            <Link href="#contact">
+            <Link href="#Contact">
               <button className="lg:p-5 p-3 border border-white rounded-lg bg-transparent text-white lg:mr-5 cursor-pointer font-light transform transition-transform duration-300 hover:scale-110 hover:bg-gradient-to-r from-color-2 to-color-3  hover:text-black hover:border-none hover:font-normal">
                 Contact me
               </button>

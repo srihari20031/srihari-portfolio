@@ -12,7 +12,9 @@ export default function Home() {
       <div id="About" className=" scroll-m-10">
         <AboutMe />
       </div>
-      <Connect />
+      <div id="Contact" className=" scroll-m-10">
+        <Connect />
+      </div>
     </main>
   );
 }

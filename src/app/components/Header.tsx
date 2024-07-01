@@ -38,7 +38,7 @@ const NavigationItems: React.FC<NavigationItemsProps> = ({ pathName, handleClick
         href="/Projects"
         onClick={handleClick}
       >
-        Showcases
+        Projects
       </Link>
     </div>
     <a
