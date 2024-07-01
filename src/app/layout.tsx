@@ -1,15 +1,15 @@
-
 import "./styles/globals.css";
 import StarsCanvas from "./components/main/StarsCanvas";
 import { Metadata } from "next";
-
-
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://srihari.com/"),
   title: "Sri hari narayan - SDE | SE ",
-  description: "Full Stack Developer with 2+ years of expertise in MERN stack applications. Specializing in dynamic and responsive web development using modern JavaScript technologies and frameworks.",
-   
+  description:
+    "Full Stack Developer with 2+ years of expertise in developing MERN stack applications. Specializing in dynamic and responsive web development using modern JavaScript technologies and frameworks.",
+
   keywords: [
     "Developer",
     "Portfolio",
@@ -17,19 +17,25 @@ export const metadata: Metadata = {
     "Sri hari",
     "Next.js",
     "React",
-    "MERN"
+    "MERN",
   ],
   openGraph: {
     title: "Sri hari narayan - SDE | SE ",
     description:
-      "Full Stack Developer with 2+ years of expertise in MERN stack applications. Specializing in dynamic and responsive web development using modern JavaScript technologies and frameworks.",
-    images: "/3d-Ma.png",
+      "Full Stack Developer with 2+ years of expertise in developing MERN stack applications. Specializing in dynamic and responsive web development using modern JavaScript technologies and frameworks.",
+    images: [
+      {
+        url: "/Portfolio.png",
+        width: 800,
+        height: 600,
+        alt: "3D Image",
+      },
+    ],
   },
   alternates: {
     canonical: "https://srihari.com/",
   },
 };
-
 
 export default function RootLayout({
   children,
@@ -40,11 +46,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         className="absolute top-0 z-[1] h-screen w-full  bg-[#0e081d] overflow-y-scroll overflow-x-hidden"
-        // style={{
-        //   backgroundImage:
-        //     "url('./2.png')",
-        // }}
       >
+        <SpeedInsights />
+        <Analytics />
         <StarsCanvas />
         {children}
       </body>

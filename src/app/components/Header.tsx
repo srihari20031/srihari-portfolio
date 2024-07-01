@@ -102,7 +102,7 @@ const Header: React.FC = () => {
   }, [pathName]);
 
   return (
-    <div className={`sticky w-full z-50 py-6 mt-2 px-28 md:px-4 max-sm:px-4 sm:px-4 mb-20`}>
+    <div className={`fixed top-0 left-0 right-0 backdrop-blur-sm w-full z-50 py-6 px-28 md:px-4 max-sm:px-4 sm:px-4`}>
       <div className="flex lg:items-center lg:px-10 px-4 justify-between md:items-center">
         <div className="lg:px-8 py-2" id="home">
           <Link
