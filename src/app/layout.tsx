@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://srihari.com/"),
+  metadataBase: new URL("https://sriharinarayantech.vercel.app/"),
   title: "Sri hari narayan - SDE | SE ",
   description:
     "Full Stack Developer with 2+ years of expertise in developing MERN stack applications. Specializing in dynamic and responsive web development using modern JavaScript technologies and frameworks.",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://srihari.com/",
+    canonical: "https://sriharinarayantech.vercel.app/",
   },
 };
 
