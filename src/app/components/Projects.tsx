@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <div className="lg:px-20 px-10 lg:mx-28 lg:my-40 my-10 lg:mt-60 ">
      
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-6 lg:gap-0">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-6 lg:gap-0 ">
         {projectsArray.map((project: any) => {
           return (
             

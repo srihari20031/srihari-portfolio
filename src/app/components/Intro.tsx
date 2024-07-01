@@ -6,7 +6,7 @@ import Image from "next/image";
 const Intro = () => {
   return (
     <div className=" lg:flex lg:justify-center lg:flex-row  lg:my-[60px] lg:mb-60 flex-col justify-center gap-8 lg:gap-24   px-8">
-      <div className="lg:w-[600px] sm:flex flex-col justify-center text-center lg:text-start mt-24">
+      <div className="lg:w-[600px] sm:flex flex-col justify-center text-center lg:text-start">
         <div className="flex items-center justify-center mb-4">
           <Image src={Man} alt="" className=" rounded-full w-[250px] h-[250px] max-sm:w-[200px] max-sm:h-[200px] bg-slate-800"/>
         </div>
