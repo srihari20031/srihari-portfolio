@@ -1,4 +1,3 @@
-import { FaArchive, FaFileAlt, FaUserAlt } from "react-icons/fa";
 import css from "../../../public/css3.png";
 import html from "../../../public/html-5.png";
 import js from "../../../public/js.png";
@@ -13,7 +12,6 @@ import mongodb from "../../../public/mongodb.png";
 import express from "../../../public/icons8-express-js-16.svg";
 import firebase from "../../../public/icons8-firebase.svg";
 import Ninchat from "../../../public/Ninchat.png";
-import Ecommerce from "../../../public/Ecommerce.png";
 import DalleClone from "../../../public/DallEClone.png";
 import MoiveApp from "../../../public/Movieapp.png";
 import Insta from "../../../public/icons8-instagram (1).svg"
@@ -118,6 +116,7 @@ export const projectsArray = [
         image: express,
       },
     ],
+    Link: "https://github.com/srihari20031/AI-Image-App"
   },
   {
     id: 1,
@@ -137,28 +136,10 @@ export const projectsArray = [
         image: firebase,
       },
     ],
+    Link: "https://react-chatapp-a95d6.web.app/"
   },
   {
     id: 2,
-    title: "E-commerce",
-    image: Ecommerce,
-    description:
-      "The E-commerce App is a full-stack web application built using React, Redux, and Firebase for seamless authentication and storage. Designed to provide an intuitive and secure e-commerce experience, this app leverages modern web technologies to ensure fast and reliable checkout.",
-    stack: [
-      {
-        id: 0,
-        name: "React",
-        image: react,
-      },
-      {
-        id: 1,
-        name: "Firebase",
-        image: firebase,
-      },
-    ],
-  },
-  {
-    id: 4,
     title: "StayHappy",
     image: StayHappy,
     description:
@@ -185,9 +166,10 @@ export const projectsArray = [
         image: express,
       },
     ],
+    Link: ""
   },
   {
-    id: 5,
+    id: 3,
     title: "React Movie Site",
     image: MoiveApp,
     description:
@@ -199,6 +181,7 @@ export const projectsArray = [
         image: react,
       },
     ],
+    Link: "https://reactpractice2804.netlify.app/"
   },
 ];
 
@@ -208,31 +191,31 @@ export const socialMediaLinks = [
     name: "Github",
     link: "https://github.com/srihari20031",
     icon: Github, 
-    backgroundColor: "#181717", 
+    
   },
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/sriharinarayanv/",
     icon: Linkedin, 
-    backgroundColor: "#0077B5", 
+    
   },
  
   {
     name: "Gmail",
     link: "mailto:sriharivelayutham.28@gmail.com",
     icon:  Gmail,
-    backgroundColor: "#1877F2",
+    
   },
   {
     name: "Instagram",
     link: "https://www.instagram.com/sri__hari__narayan__v/",
     icon: Insta, 
-    backgroundColor: "#E4405F", 
+    
   },
   {
     name: "Twitter",
     link: "https://x.com/Srihari280",
     icon: X, 
-    backgroundColor: "#E4405F", 
+   
   },
 ];
