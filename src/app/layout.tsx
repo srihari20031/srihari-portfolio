@@ -47,10 +47,11 @@ export default function RootLayout({
       <body
         className="absolute top-0 z-[1] h-screen w-full  bg-[#0e081d] overflow-y-scroll overflow-x-hidden"
       >
-        <SpeedInsights />
-        <Analytics />
+        
         <StarsCanvas />
         {children}
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
